@@ -86,41 +86,7 @@ cd test/dummy
 rails s
 ```
 
-Now log into the admin, click the 'Configuration' tab, then click 'Manage Redirects'. Try adding a redirect for `/shop.php` that points to `/products`, then visit [http://localhost:3000/shop.php](http://localhost:3000/shop.php). You should be redirected to `/products`.
-
-
-------------------------------------------------------------------------------
-Contributors
-------------------------------------------------------------------------------
-
-So far it's just me; Spencer Steffen.
-
-If you'd like to help out feel free to fork and send me pull requests!
-
-
-------------------------------------------------------------------------------
-Change Log
-------------------------------------------------------------------------------
-
-**2012/5/7**
-
-* Add support for spree 1.1.x
-
-
-**2012/3/14**
-
-* Add support for spree 1.0.x
-
-
-**0.2.0 - 2012/1/5**
-
-* Add support for spree 0.70.x and above
-* Remove spork development dependency
-
-
-**0.1.0 - 2011/6/1**
-
-* Initial Release
+Now create a redirect from the console, for example to create a redirect for `/shop.php` that points to `/products`, run `Spree::Redirect.create(old_url: "/index.php", new_url: "/products")` then visit [http://localhost:3000/shop.php](http://localhost:3000/shop.php). You should be redirected to `/products`.
 
 
 ------------------------------------------------------------------------------
